@@ -1,0 +1,82 @@
+/* Basic Flex Utility */
+.flex {
+    display: flex;
+}
+
+/* Width and Margin Utilities */
+.max-w-sm {
+    max-width: 24rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Space Utilities */
+.space-y-2>*+* {
+    margin-top: 0.5rem;
+}
+
+.space-y-4>*+* {
+    margin-top: 1rem;
+}
+
+.space-y-6>*+* {
+    margin-top: 1.5rem;
+}
+
+.my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Text Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.text-muted-foreground {
+    color: #6b7280;
+    /* Tailwind gray-500 */
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+button {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Links */
+a {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #2563eb;
+}
