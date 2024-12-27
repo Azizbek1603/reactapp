@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
 import "./register.css";
+import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
+    const navigate = useNavigate();
     const airlineAddresses = {
         "Uzbekistan Airways": "Tashkent International Airport",
         "Air Astana": "Almaty and Nur-Sultan Airports",
@@ -78,11 +80,21 @@ const Register = () => {
             const response = await axios.post('http://localhost:3000/pilots', dataToSend);
             toast.success("Successfully Registered")
             console.log(response.data);
+            localStorage.setItem('user', JSON.stringify(response.data));
+            navigateUser(response.data)
         } catch (error) {
             toast.error(error.response.data.errorResponse.errmsg)
             console.log(error)
         }
     };
+
+    const navigateUser = (data) => {
+        if(data.role == "Pilot"){
+            navigate("/pilot")
+        } else if(data.role == "Flight Manager"){
+            navigate("/manager")
+        }
+    }
 
     return (<>
         <div className="mx-auto max-w-sm space-y-6">
@@ -161,7 +173,15 @@ const Register = () => {
                     </div>
                 </div>
             </form>
-                <button type="submit" className="button" onClick={handleSubmit}>Register</button>
+            <button type="submit" className="button" onClick={handleSubmit}>Register</button>
+            <div className="text-center">
+                <p className="text-muted-foreground">
+                    Already have an account?{" "}
+                    <a href="/" className="underline">
+                        Login
+                    </a>
+                </p>
+            </div>
         </div>
         <ToastContainer />
     </>
