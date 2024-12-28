@@ -28,7 +28,7 @@ const Login = () => {
     const navigateUser = (data) => {
         if(data.role == "Pilot"){
             navigate("/pilot")
-        } else if(data.role == "Flight Maneger"){
+        } else if(data.role == "Flight Manager"){
             navigate("/manager")
         }
     }

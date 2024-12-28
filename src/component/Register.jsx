@@ -116,10 +116,10 @@ const Register = () => {
                         <label htmlFor="role" className="sr-only">Role</label>
                         <select id="role" name="role" required className="input-field" onChange={handleChange}>
                             <option hidden defaultValue>Select Role</option>
-                            <option>Pilot</option>
-                            <option>ATC Manager</option>
-                            <option>Flight Maneger</option>
-                            <option>Airport Supervisor</option>
+                            <option value="Pilot">Pilot</option>
+                            <option value="ATC">ATC Manager</option>
+                            <option value="Flight Manager">Flight Maneger</option>
+                            <option value="Supervisor">Airport Supervisor</option>
                         </select>
                     </div>
                     <div>

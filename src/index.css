@@ -330,6 +330,7 @@ select {
   padding: 5px;
   font-size: 14px;
   border: 1px solid #bbb;
+  cursor: pointer;
 }
 
 .highlight {

@@ -13,7 +13,7 @@ export default function App() {
         <Route path="/" element={<Login />}>
         </Route>
         <Route path="/register" element={<Register />} />
-        <Route path="/table" element={<Table/>} />
+        <Route path="/table/:id" element={<Table/>} />
         <Route path="/pilot" element={<PilotCalendar/>} />
         <Route path="/manager" element={<FlightManager/>} />
       </Routes>
